@@ -1,1 +1,10 @@
-
+<html>
+<head>
+<body>
+  <ul>
+    {% for d in devices %}
+      <li id="device{{ d['id'] }}"><a href="device/{{ d.id }}" data-transition="flip" >{{ d['name'] }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
