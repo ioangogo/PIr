@@ -1,7 +1,9 @@
 from flask import Flask
+from flask import render_template
 import lirc
 app = Flask(__name__)
 deviceids = lirc.getids()
+
 @app.route('/')
 def index():
     global deviceids
@@ -16,4 +18,5 @@ def index():
     
 
 if __name__ == '__main__':
-    app.run()
+    app.debug = True
+    app.run(host='0.0.0.0')

@@ -1,3 +1,4 @@
+import subprocess
 def getids():
  """
  returns a array of all configured devices
